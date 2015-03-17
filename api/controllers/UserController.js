@@ -33,14 +33,5 @@ module.exports = {
     });
   },
 
-	findAdult: function (req, res) {
-		sails.log.debug("*******************finAdult");
-		User.find({age: {'>=': 18}}).done(function (err, users) {
-			  if (err) res.json({ error: 'oups error' }, 500);
-				if (users) {res.json(users) }
-				else { res.json({ message: 'User not found' });}
-		});
-
-	}
 
 };

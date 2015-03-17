@@ -9,8 +9,18 @@ module.exports = {
 
   attributes: {
 
+      firstName: 'STRING',
+
+      lastName: 'STRING',
+
+      age: { type: 'INTEGER', max: 150, required: true },
+
+      birthDate: 'DATE',
+
+      phoneNumber: { type: 'STRING', defaultsTo: '111-222-3333' },
+
       email: {
-        type: 'string',
+        type: 'email',
         unique: true,
         required: true
       },
