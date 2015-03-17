@@ -34,6 +34,26 @@ module.exports.routes = {
 
   '/': {
     view: 'index'
+  },
+
+    '/index': {
+    view: 'index'
+  },
+
+     '/map': {
+    view: 'map'
+  },
+
+     '/charte': {
+    view: 'charte'
+  },
+
+     '/contact': {
+    view: 'contact'
+  },
+
+     '/espace': {
+    view: 'espace'
   }
 
   /***************************************************************************

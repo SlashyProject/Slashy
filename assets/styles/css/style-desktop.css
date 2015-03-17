@@ -259,7 +259,7 @@
 		
 			#nav > ul > li.current > a
 			{
-				background: #d52349;
+				background: #8DC73F;
 				color: #fff !important;
 				font-weight: 700;
 			}
@@ -334,7 +334,7 @@
 		#banner header
 		{
 			display: inline-block;
-			padding: 2.5em 5em;
+			padding: 2.5em 10em;
 			border-radius: 5px;
 		}
 		
@@ -348,6 +348,11 @@
 			{
 				font-size: 1.5em;
 			}
+
+	#formRecherche
+	{
+		display: inline-block;
+	}
 			
 /*********************************************************************************/
 /* Footer                                                                        */
