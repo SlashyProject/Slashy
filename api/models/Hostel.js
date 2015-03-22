@@ -15,6 +15,8 @@ module.exports = {
 
       address:{ type: 'STRING', required: true },
 
+      city:{ type: 'STRING', required: true },
+
       price: 'INTEGER'
   }
-};  
+};

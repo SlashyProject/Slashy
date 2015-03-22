@@ -7,20 +7,40 @@
 
 module.exports = {
 
-	findHostelByName:function(req,res)
+	findHostel:function(req,res)
 	{
-		var nameToFind = req.param('name');
-    Hostel.findOne({name:nameToFind}).exec(function(err,hostel)
+		var hostelToFind = req.param('hostel');
+		Hostel.findOne({city:hostelToFind}).exec(function(err,hostel)
 		{
+				if(err)
+				{
+					res.json({error:err});
+				}
 
-        if(err)
-          res.json({error:err});
+				if(hostel === undefined)
+				{
+						Hostel.findOne({name:hostelToFind}).exec(function(err,hostel)
+						{
+								if(err)
+								{
+									res.json({error:err});
+								}
 
-        if(hostel === undefined)
-          res.json({notFound:true});
+								if(hostel === undefined)
+									res.json({notFound:true});
 
-        else
-          res.json({notFound:false,hostelData:hostel});
+								else
+									res.json({notFound:false,hostelData:hostel});
+
+
+							});
+				}
+
+				else
+					res.json({notFound:false,hostelData:hostel});
+
+
 			});
 	}
+
 };
