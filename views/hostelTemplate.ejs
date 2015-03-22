@@ -1,0 +1,21 @@
+<h1>{{ pagename|title }}</h1>
+<ul>
+{% for hostel in hostels %}
+<section class="box">
+		<img src="images/pic08.jpg" class="image featured" alt="" />
+		<header>
+			<h3>{{ name }}</h3>
+			<p>{{ address }}</p>
+		</header>
+		<p>{{ description }}</p>
+		<p>{{ handicape }}</p>
+		<p>{{ contact }}</p>
+		<footer>
+			<ul class="actions">
+				<li><a href="#" class="button icon fa-file-text">{{ price }} - Réservez</a></li>
+				<li><a href="#" class="button alt icon fa-comment">{{ numberComment }} Avis</a></li>
+			</ul>
+		</footer>
+	</section>
+{% endfor %}
+</ul>
